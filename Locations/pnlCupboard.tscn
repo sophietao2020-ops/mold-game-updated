@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://bu8a5fl3mpcky"]
+
+[ext_resource type="Script" uid="uid://dquasgjl3bkpc" path="res://Locations/gdcupboard.gd" id="1_h135i"]
+[ext_resource type="Script" uid="uid://8j54efv64s61" path="res://Locations/hand.gd" id="2_ace78"]
+[ext_resource type="FontFile" uid="uid://c5cbr6bl6qycv" path="res://VanillaCreamOx-Regular.otf" id="2_kuq8l"]
+[ext_resource type="Texture2D" uid="uid://6snsknyutak8" path="res://Hand/open_hand.png" id="3_reraj"]
+[ext_resource type="Texture2D" uid="uid://dq5qrbkbi8hre" path="res://Backgrounds/cupboard.jpg" id="4_reraj"]
+[ext_resource type="FontFile" uid="uid://cn3wa4ja0owc7" path="res://SuperEasy-ZVAr3.ttf" id="6_ijy3p"]
+[ext_resource type="Texture2D" uid="uid://2cg412glujcs" path="res://white-textured-torn-lined-paper-piece-png.png" id="7_s2mmo"]
+[ext_resource type="Theme" uid="uid://ch48g1vt2tas0" path="res://text_theme.tres" id="8_e2s3a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pshsg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4j4vh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdryf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8bmw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_runes"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uriio"]
+texture = ExtResource("7_s2mmo")
+
+[node name="pnlCupboard" type="Panel" unique_id=1504926072]
+offset_right = 1154.0
+offset_bottom = 648.0
+script = ExtResource("1_h135i")
+
+[node name="btnLocation0" type="TextureButton" parent="." unique_id=333011645]
+z_index = 3
+layout_mode = 0
+offset_left = 364.0
+offset_top = 103.0
+offset_right = 481.0
+offset_bottom = 227.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation1" type="TextureButton" parent="." unique_id=1767799161]
+z_index = 3
+layout_mode = 0
+offset_left = 624.0
+offset_top = 99.0
+offset_right = 747.0
+offset_bottom = 223.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation2" type="TextureButton" parent="." unique_id=1486734495]
+z_index = 3
+layout_mode = 0
+offset_left = 410.0
+offset_top = 387.0
+offset_right = 530.0
+offset_bottom = 515.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation3" type="TextureButton" parent="." unique_id=1678907741]
+z_index = 3
+layout_mode = 0
+offset_left = 671.0
+offset_top = 375.0
+offset_right = 796.0
+offset_bottom = 508.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnToKitchen" type="Button" parent="." unique_id=1677143626]
+z_index = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 208.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("2_kuq8l")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1752910918]
+z_index = 3
+position = Vector2(1152, 648)
+
+[node name="Hand" type="Node2D" parent="Node2D" unique_id=414619014]
+z_index = 3
+script = ExtResource("2_ace78")
+
+[node name="HandSprite" type="Sprite2D" parent="Node2D/Hand" unique_id=1683517258]
+z_index = 3
+position = Vector2(-345, -295)
+scale = Vector2(0.2626667, 0.21466666)
+texture = ExtResource("3_reraj")
+centered = false
+
+[node name="Cupboard" type="Sprite2D" parent="." unique_id=1205280965]
+position = Vector2(576, 324)
+scale = Vector2(0.74131274, 0.6)
+texture = ExtResource("4_reraj")
+metadata/_edit_lock_ = true
+
+[node name="PauseIcon" type="CanvasLayer" parent="." unique_id=948343417]
+
+[node name="PauseButton" type="Button" parent="PauseIcon" unique_id=899101077]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 61.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_ijy3p")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pshsg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4j4vh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xdryf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t8bmw")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_runes")
+text = "||"
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=965608920]
+process_mode = 2
+visible = false
+
+[node name="DarkenBG" type="ColorRect" parent="PauseMenu" unique_id=504238821]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="MenuPanel" type="Panel" parent="PauseMenu" unique_id=1471075169]
+custom_minimum_size = Vector2(350, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uriio")
+
+[node name="Label" type="Label" parent="PauseMenu/MenuPanel" unique_id=1256162335]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 30.0
+offset_right = 65.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme = ExtResource("8_e2s3a")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GAME IS PAUSED"
+
+[node name="Buttons" type="VBoxContainer" parent="PauseMenu" unique_id=435950672]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -41.0
+offset_right = 76.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_e2s3a")
+
+[node name="btnResume" type="Button" parent="PauseMenu/Buttons" unique_id=251926782]
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="btnExit" type="Button" parent="PauseMenu/Buttons" unique_id=371831982]
+layout_mode = 2
+text = "EXIT TO TITLE"
+
+[connection signal="pressed" from="btnLocation0" to="." method="_on_btn_location_0_pressed"]
+[connection signal="pressed" from="btnLocation1" to="." method="_on_btn_location_1_pressed"]
+[connection signal="pressed" from="btnLocation2" to="." method="_on_btn_location_2_pressed"]
+[connection signal="pressed" from="btnLocation3" to="." method="_on_btn_location_3_pressed"]
+[connection signal="pressed" from="btnToKitchen" to="." method="_on_btn_to_kitchen_pressed"]
+[connection signal="pressed" from="PauseIcon/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnResume" to="." method="_on_btn_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnExit" to="." method="_on_btn_exit_pressed"]

@@ -1,0 +1,266 @@
+[gd_scene format=3 uid="uid://dnveeke63vq8x"]
+
+[ext_resource type="Script" uid="uid://q1r1wwil6fn2" path="res://Locations/gdKitchen.gd" id="1_cta8g"]
+[ext_resource type="FontFile" uid="uid://cn3wa4ja0owc7" path="res://SuperEasy-ZVAr3.ttf" id="2_23u7t"]
+[ext_resource type="Texture2D" uid="uid://2cg412glujcs" path="res://white-textured-torn-lined-paper-piece-png.png" id="2_58cw3"]
+[ext_resource type="Script" uid="uid://8j54efv64s61" path="res://Locations/hand.gd" id="2_yfnuj"]
+[ext_resource type="Theme" uid="uid://ch48g1vt2tas0" path="res://text_theme.tres" id="3_23u7t"]
+[ext_resource type="Texture2D" uid="uid://6snsknyutak8" path="res://Hand/open_hand.png" id="3_gvgu0"]
+[ext_resource type="Texture2D" uid="uid://bol5vurf6ewjg" path="res://Backgrounds/kitchen.jpg" id="4_s11qr"]
+[ext_resource type="Texture2D" uid="uid://dx085xpl6crim" path="res://Paper.png" id="5_5eoxj"]
+[ext_resource type="FontFile" uid="uid://c5cbr6bl6qycv" path="res://VanillaCreamOx-Regular.otf" id="6_133ee"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkq6d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_djot6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lnksr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wtd3q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ieb5m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kkq6d"]
+texture = ExtResource("2_58cw3")
+
+[node name="pnlKitchen" type="Panel" unique_id=659178139]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = ExtResource("1_cta8g")
+
+[node name="PauseIcon" type="CanvasLayer" parent="." unique_id=522830468]
+
+[node name="PauseButton" type="Button" parent="PauseIcon" unique_id=613516368]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 61.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_23u7t")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kkq6d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_djot6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_lnksr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wtd3q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ieb5m")
+text = "||"
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1700638145]
+process_mode = 2
+visible = false
+
+[node name="DarkenBG" type="ColorRect" parent="PauseMenu" unique_id=848811806]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="MenuPanel" type="Panel" parent="PauseMenu" unique_id=782336482]
+custom_minimum_size = Vector2(350, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kkq6d")
+
+[node name="Label" type="Label" parent="PauseMenu/MenuPanel" unique_id=653018533]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 30.0
+offset_right = 65.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme = ExtResource("3_23u7t")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GAME IS PAUSED"
+
+[node name="Buttons" type="VBoxContainer" parent="PauseMenu" unique_id=1771512476]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -41.0
+offset_right = 76.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_23u7t")
+
+[node name="btnResume" type="Button" parent="PauseMenu/Buttons" unique_id=182757251]
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="btnExit" type="Button" parent="PauseMenu/Buttons" unique_id=981699481]
+layout_mode = 2
+text = "EXIT TO TITLE"
+
+[node name="btnToFridge" type="Button" parent="." unique_id=887381952]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_left = 808.0
+offset_top = 144.0
+offset_right = 1165.0
+offset_bottom = 663.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0.639216, 1, 0.639216, 1)
+theme_override_font_sizes/font_size = 24
+text = "go to fridge
+"
+
+[node name="btnToSink" type="Button" parent="." unique_id=1888800162]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_left = 160.0
+offset_top = 276.0
+offset_right = 455.0
+offset_bottom = 428.0
+text = "go to sink"
+
+[node name="btnToCupboard" type="Button" parent="." unique_id=225340205]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_left = 184.0
+offset_top = -1.0
+offset_right = 701.0
+offset_bottom = 195.0
+text = "go to cubord"
+
+[node name="btnToTable" type="Button" parent="." unique_id=1071241993]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 0
+offset_left = -4.0
+offset_top = 489.0
+offset_right = 464.0
+offset_bottom = 650.0
+text = "to table"
+
+[node name="btnToDrawer" type="Button" parent="." unique_id=2077361819]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_left = 492.0
+offset_top = 459.0
+offset_right = 757.0
+offset_bottom = 584.0
+text = "Go to Drawer"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=946658949]
+z_index = 2
+position = Vector2(1152, 648)
+
+[node name="Hand" type="Node2D" parent="Node2D" unique_id=1837922803]
+z_index = 2
+script = ExtResource("2_yfnuj")
+
+[node name="HandSprite" type="Sprite2D" parent="Node2D/Hand" unique_id=1101622366]
+z_index = 2
+position = Vector2(-345, -295)
+scale = Vector2(0.2626667, 0.21466666)
+texture = ExtResource("3_gvgu0")
+centered = false
+
+[node name="Kitchen" type="Sprite2D" parent="." unique_id=1152372074]
+position = Vector2(576, 324)
+scale = Vector2(0.7413128, 0.6)
+texture = ExtResource("4_s11qr")
+metadata/_edit_lock_ = true
+
+[node name="Tutorial" type="Sprite2D" parent="." unique_id=1860046095]
+position = Vector2(578, 104)
+scale = Vector2(0.8471582, 0.62285715)
+texture = ExtResource("5_5eoxj")
+
+[node name="lblTutorial" type="Label" parent="Tutorial" unique_id=1200906254]
+offset_left = -277.398
+offset_top = -61.009224
+offset_right = 277.39807
+offset_bottom = -0.009223938
+focus_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0.7490196, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("6_133ee")
+theme_override_font_sizes/font_size = 60
+text = "SKIP TUTORIAL???"
+horizontal_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="btnSkipTutorialNo" type="Button" parent="Tutorial" unique_id=966041131]
+offset_left = 83.80964
+offset_top = 16.055054
+offset_right = 194.77121
+offset_bottom = 85.05505
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0.7490196, 0.08627451, 1)
+theme_override_colors/font_focus_color = Color(0.15686275, 0.47843137, 0.12156863, 1)
+theme_override_colors/font_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/font_hover_color = Color(0.043137256, 0.24705882, 0.039215688, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_fonts/font = ExtResource("6_133ee")
+theme_override_font_sizes/font_size = 50
+text = "NO!!!
+
+"
+flat = true
+
+[node name="btnSkipTutorialYes" type="Button" parent="Tutorial" unique_id=1601956001]
+offset_left = -175.88214
+offset_top = 19.266064
+offset_right = -64.920555
+offset_bottom = 88.26607
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0.7490196, 0.08627451, 1)
+theme_override_colors/font_focus_color = Color(0.15686275, 0.47843137, 0.12156863, 1)
+theme_override_colors/font_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/font_hover_color = Color(0.043137256, 0.24705882, 0.039215688, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_focus_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.03529412, 0.2784314, 0, 1)
+theme_override_fonts/font = ExtResource("6_133ee")
+theme_override_font_sizes/font_size = 50
+text = "YES!!
+"
+flat = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="PauseIcon/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnResume" to="." method="_on_btn_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnExit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="btnToFridge" to="." method="_on_btn_to_fridge_pressed"]
+[connection signal="pressed" from="btnToSink" to="." method="_on_btn_to_sink_pressed"]
+[connection signal="pressed" from="btnToCupboard" to="." method="_on_btn_scene_c_pressed"]
+[connection signal="pressed" from="btnToCupboard" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="btnToCupboard" to="." method="_on_btn_to_cupboard_pressed"]
+[connection signal="pressed" from="btnToTable" to="." method="_on_btn_to_table_pressed"]
+[connection signal="pressed" from="btnToDrawer" to="." method="_on_btn_to_drawer_pressed"]
+[connection signal="pressed" from="Tutorial/btnSkipTutorialNo" to="." method="_on_btn_skip_tutorial_no_pressed"]
+[connection signal="pressed" from="Tutorial/btnSkipTutorialYes" to="." method="_on_btn_skip_tutorial_yes_pressed"]

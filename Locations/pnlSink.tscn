@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://bhh6ur6ma2rq0"]
+
+[ext_resource type="Script" uid="uid://dvacd4s2mpowy" path="res://Locations/gdSink.gd" id="1_qkko4"]
+[ext_resource type="FontFile" uid="uid://c5cbr6bl6qycv" path="res://VanillaCreamOx-Regular.otf" id="2_2hi7m"]
+[ext_resource type="Script" uid="uid://8j54efv64s61" path="res://Locations/hand.gd" id="2_j6bc3"]
+[ext_resource type="Texture2D" uid="uid://6snsknyutak8" path="res://Hand/open_hand.png" id="3_ruhrk"]
+[ext_resource type="Texture2D" uid="uid://dsi8eouiv1yi3" path="res://Backgrounds/sink.jpg" id="4_ruhrk"]
+[ext_resource type="Texture2D" uid="uid://dx085xpl6crim" path="res://Paper.png" id="6_31dbu"]
+[ext_resource type="FontFile" uid="uid://cn3wa4ja0owc7" path="res://SuperEasy-ZVAr3.ttf" id="7_peoaj"]
+[ext_resource type="Texture2D" uid="uid://2cg412glujcs" path="res://white-textured-torn-lined-paper-piece-png.png" id="8_qfotl"]
+[ext_resource type="Theme" uid="uid://ch48g1vt2tas0" path="res://text_theme.tres" id="9_qaf45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eqyhy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5oom3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vr4xs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkof7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnnlk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puuwy"]
+texture = ExtResource("8_qfotl")
+
+[node name="pnlSink" type="Panel" unique_id=1514423796]
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_qkko4")
+
+[node name="btnToKitchen" type="Button" parent="." unique_id=1517462592]
+z_index = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 208.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("2_2hi7m")
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=494613042]
+z_index = 2
+position = Vector2(1152, 648)
+
+[node name="Hand" type="Node2D" parent="Node2D" unique_id=1112682445]
+z_index = 2
+script = ExtResource("2_j6bc3")
+
+[node name="HandSprite" type="Sprite2D" parent="Node2D/Hand" unique_id=653548512]
+z_index = 2
+position = Vector2(-345, -295)
+scale = Vector2(0.2626667, 0.21466666)
+texture = ExtResource("3_ruhrk")
+centered = false
+
+[node name="Sink" type="Sprite2D" parent="." unique_id=1791032231]
+position = Vector2(576.50006, 324.5)
+scale = Vector2(0.7406693, 0.5972222)
+texture = ExtResource("4_ruhrk")
+metadata/_edit_lock_ = true
+
+[node name="btnLocation1" type="TextureButton" parent="." unique_id=1128163000]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 344.0
+offset_right = 179.0
+offset_bottom = 453.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation2" type="TextureButton" parent="." unique_id=1755830888]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 366.0
+offset_right = 982.0
+offset_bottom = 475.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation3" type="TextureButton" parent="." unique_id=1178791266]
+layout_mode = 0
+offset_left = 661.0
+offset_top = 278.0
+offset_right = 772.0
+offset_bottom = 387.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="btnLocation4" type="TextureButton" parent="." unique_id=1425742212]
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 358.0
+offset_right = 1142.0
+offset_bottom = 467.0
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Tutorial" type="Sprite2D" parent="." unique_id=906053352]
+position = Vector2(578, 104)
+scale = Vector2(0.8471582, 0.62285715)
+texture = ExtResource("6_31dbu")
+
+[node name="lblTutorial" type="Label" parent="Tutorial" unique_id=1145636095]
+offset_left = -279.75882
+offset_top = -59.403664
+offset_right = 275.03726
+offset_bottom = 129.59634
+focus_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0.7490196, 0.08627451, 1)
+theme_override_fonts/font = ExtResource("2_2hi7m")
+theme_override_font_sizes/font_size = 60
+text = "PICK UP THE CUP!!
+your mold needs it!"
+horizontal_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="PauseIcon" type="CanvasLayer" parent="." unique_id=1784891725]
+
+[node name="PauseButton" type="Button" parent="PauseIcon" unique_id=692520278]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -41.0
+offset_bottom = 61.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_peoaj")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eqyhy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5oom3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vr4xs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mkof7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hnnlk")
+text = "||"
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=616199603]
+process_mode = 2
+visible = false
+
+[node name="DarkenBG" type="ColorRect" parent="PauseMenu" unique_id=2084910505]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="MenuPanel" type="Panel" parent="PauseMenu" unique_id=411186533]
+custom_minimum_size = Vector2(350, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_puuwy")
+
+[node name="Label" type="Label" parent="PauseMenu/MenuPanel" unique_id=61211728]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 30.0
+offset_right = 65.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme = ExtResource("9_qaf45")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GAME IS PAUSED"
+
+[node name="Buttons" type="VBoxContainer" parent="PauseMenu" unique_id=377616946]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -41.0
+offset_right = 76.5
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_qaf45")
+
+[node name="btnResume" type="Button" parent="PauseMenu/Buttons" unique_id=1846342153]
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="btnExit" type="Button" parent="PauseMenu/Buttons" unique_id=1461882534]
+layout_mode = 2
+text = "EXIT TO TITLE"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="pressed" from="btnToKitchen" to="." method="_on_btn_to_kitchen_pressed"]
+[connection signal="pressed" from="btnLocation1" to="." method="_on_btn_location_1_pressed"]
+[connection signal="pressed" from="btnLocation2" to="." method="_on_btn_location_2_pressed"]
+[connection signal="pressed" from="btnLocation3" to="." method="_on_btn_location_3_pressed"]
+[connection signal="pressed" from="btnLocation4" to="." method="_on_btn_location_4_pressed"]
+[connection signal="pressed" from="PauseIcon/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnResume" to="." method="_on_btn_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/Buttons/btnExit" to="." method="_on_btn_exit_pressed"]
