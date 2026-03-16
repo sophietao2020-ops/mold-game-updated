@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://nugpqjmga0m5"]
+
+[ext_resource type="Script" uid="uid://cgd8w1um1bcky" path="res://Credits.gd" id="1_4qwwl"]
+[ext_resource type="FontFile" uid="uid://c5cbr6bl6qycv" path="res://VanillaCreamOx-Regular.otf" id="2_obosj"]
+
+[node name="Panel" type="Panel" unique_id=409255498]
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_4qwwl")
+
+[node name="Label" type="Label" parent="." unique_id=354097571]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 190.0
+offset_right = 797.0
+offset_bottom = 381.0
+theme_override_fonts/font = ExtResource("2_obosj")
+theme_override_font_sizes/font_size = 40
+text = "Game by:
+Jintian Shangguan
+Anlan Gai
+Sophie Tao"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=730011825]
+z_index = -1
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1406165861]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 7.0
+offset_right = 186.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_obosj")
+theme_override_font_sizes/font_size = 43
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
